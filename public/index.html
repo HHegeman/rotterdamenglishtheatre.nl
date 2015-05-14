@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>REST: Rotterdam English Speaking Theatre</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<style type="text/css">
+<!--
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: #000000;
+	margin: 0;
+	padding: 0;
+	color: #FFFFFF;
+	background-image: url();
+}
+/* ~~ Element-/tagkiezers ~~ */
+ul, ol, dl { /* Vanwege de verschillen tussen browsers kunt u het beste geen opvulling en marges gebruiken voor lijsten. Voor consistentie kunt u hier of bij de items (LI, DT, DD) voor de lijsten de gewenste waarden opgeven. Houd er rekening mee dat wat u hier doet, wordt gebruikt in de navigatielijst, tenzij u een specifiekere kiezer opgeeft. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* als u de bovenmarge verwijdert, voorkomt u dat marges buiten het blok vallen waartoe ze behoren. De resterende ondermarge zorgt ervoor dat er ruimte blijft tussen het blok en alle volgende elementen. */
+	padding-right: 15px;
+	padding-left: 15px; /* als u opvulling toevoegt aan de zijkant van de elementen in de blokken, in plaats van aan de blokelementen zelf, voorkomt u dat u kadermodelberekeningen moet uitvoeren. U kunt als alternatief een genest blok met opvulling aan de zijkant gebruiken. */
+}
+a img { /* met deze kiezer verwijdert u de blauwe standaardrand die in bepaalde browsers wordt weergeven rond een afbeelding als deze wordt omgeven door een koppeling */
+	border: none;
+}
+/* ~~ De stijl voor de koppelingen op uw site moet deze volgorde aanhouden, inclusief de groep kiezers waarmee het aanwijseffect wordt gemaakt. ~~ */
+a:link {
+	color: #000000;
+	text-decoration: underline; /* tenzij u zeer unieke opmaak toepast op uw koppelingen, kunt u de koppelingen het beste onderstrepen zodat ze gemakkelijk te herkennen zijn */
+}
+a:visited {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* met deze groep kiezers krijgen gebruikers die navigeren met een toetsenbord, dezelfde aanwijsfunctionaliteit als gebruikers die werken met een muis. */
+	text-decoration: none;
+}
+/* ~~ Deze container met vaste breedte omvat alle overige blokken ~~ */
+.container {
+	width: 960px;
+	background-color: #000000;
+	margin: 0 auto; /* de lay-out wordt gecentreerd via de combinatie van de automatische waarde voor de zijkanten en de breedte */
+}
+/* ~~ De koptekst heeft geen opgegeven breedte, maar krijgt de volledige breedte van uw lay-out. ~~ */
+header {
+	background-color: #000000;
+}
+/* ~~ Dit zijn de kolommen voor de lay-out. ~~ 
+
+1) Opvulling wordt alleen boven en/of onder aan de blokelementen geplaatst. De elementen binnen deze blokelementen hebben opvulling aan de zijkanten. Hierdoor hoeft u geen kadermodelberekeningen uit te voeren. Houd er rekening mee dat als u opvulling aan de zijkant of een rand aan het blok zelf toevoegt, deze opvulling wordt toegevoegd aan de waarde die u definieert voor de totale breedte. U kunt ook de opvulling voor een element in het blokelement verwijderen en in het blokelement een tweede blokelement invoegen die geen breedte heeft, maar wel de benodigde opvulling voor uw ontwerp bevat.
+
+2) Er is geen marge ingesteld voor de kolommen omdat deze allemaal zwevend zijn. Als u marge moet toevoegen, moet u dit niet doen aan de kant waarnaar de kolom zweeft (bijvoorbeeld een rechtermarge voor een blokelement dat is ingesteld op zweven naar rechts). Vaak kunt u hiervoor opvulling gebruiken. Bij blokelementen waarvoor u deze regel niet kunt toepassen, moet u een declaratie ‘display:inline’ toevoegen aan de regel van het blokelement om een fout op te lossen waarbij in sommige versies van Internet Explorer de marge wordt verdubbeld.
+
+3) Omdat klassen meerdere keren kunnen worden gebruikt in een document en meerdere klassen kunnen worden toegepast op een element, zijn aan de kolommen klassenamen toegewezen in plaats van id's. U kunt bijvoorbeeld zo nodig twee zijbalk-blokelementen stapelen. Desgewenst kunt u deze eenvoudig wijzigen in id’s, zolang u maar ervoor zorgt dat u ze één keer per document gebruikt.
+
+4) Indien gewenst kunt u de navigatie aan linkerkant plaatsen in plaats van aan de rechterkant. Hiervoor hoeft u alleen de kolommen in tegenovergestelde richting te laten zweven (allemaal naar links in plaats van naar rechts), waarna ze in omgekeerde volgorde worden weergegeven. U hoeft de blokken niet te verplaatsen in de HTML-broncode.
+
+*/
+.sidebar1 {
+	float: right;
+	width: 180px;
+	background-color: #000000;
+	padding-bottom: 10px;
+}
+.content {
+	padding: 10px 0;
+	width: 780px;
+	float: right;
+}
+
+/* ~~ De gegroepeerde kiezer zorgt voor de ruimte van de lijsten in het inhoudsgebied ~~ */
+.content ul, .content ol {
+	padding: 0 15px 15px 40px; /* deze opvulling is gespiegeld aan de rechteropvulling in de voorgaande regel voor koppen en alinea’s. De opvulling is onderaan geplaatst zodat er ruimte ontstaat tussen overige elementen in de lijsten en is aan de linkerkant geplaatst om de inspringing te maken. Deze opvulling kunt u naar wens aanpassen. */
+}
+
+/* ~~ De stijlen voor navigatiebalken (kunnen worden verwijderd als u een voorgedefinieerd vlieguit-menu, bijvoorbeeld Spry, gebruikt) ~~ */
+ul.nav {
+	list-style: none; /* hiermee verwijdert u de lijstmarkering */
+	border-top: 1px solid #666; /* hiermee maakt u de bovenrand voor de koppelingen - de overige worden geplaatst via een onderrand op de LI */
+	margin-bottom: auto; /* hiermee stelt u de ruimte in tussen de navigatie en de inhoud eronder */
+}
+ul.nav li {
+	border-bottom: 1px solid #666; /* hiermee maakt u de scheiding voor knoppen */
+}
+ul.nav a, ul.nav a:visited { /* als u deze kiezers groepeert, behouden de koppelingen het knopuiterlijk ook nadat erop de koppelingen is geklikt */
+	padding: 5px 5px 5px 15px;
+	display: block; /* hiermee krijgt de koppeling de blokeigenschappen, waardoor de koppeling de hele LI in het blok vult en het volledige gebied reageert op een muisklik. */
+	width: 160px;  /*met deze breedte kan op de volledige knop worden geklikt in Internet Explorer 6. Als u IE6 niet ondersteunt, kunt u dit verwijderen. U kunt de juiste breedte berekenen door de opvulling voor deze koppeling af te trekken van de breedte van de zijbalkcontainer. */
+	text-decoration: none;
+	color: #FFFFFF;
+	background-color: #000000;
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* hiermee wijzigt u de achtergrond en tekstkleur van muis- en toetsenbordnavigatie */
+	background-color: #000000;
+	color: #CCC;
+	text: #FFFFFF;
+	link: #FFFFFF;
+}
+
+/* ~~ De voettekst ~~ */
+footer {
+	padding: 10px 0;
+	background-color: #000000;
+	position: relative;/* hiermee kan de eigenschap hasLayout voor IE6 op de juiste wijze worden gewist */
+	clear: both; /* met deze eigenschap voor wissen kan de container bepalen waar de zwevende kolommen eindigen en ze insluiten */
+}
+
+/*Ondersteuning voor HTML 5 - Stelt nieuwe HTML 5-tags in op display:block zodat browsers weten hoe ze de tags juist moeten weergeven. */
+header, section, footer, aside, article, figure {
+	display: block;
+}
+-->
+</style><!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--></head>
+
+<body bgcolor="#000000" text="#FFFFFF" link="#FFFFFF">
+
+<div class="container">
+  <header>
+  	<h1>REST, Rotterdam English Speaking Theatre</h1>
+  	<p></p>
+  </header>  
+
+  <div class="sidebar1">
+    <ul class="nav">
+        <li>Get Your Tickets Here:</li>
+        <li><a onclick="window.open(this.href, this.target, 'height=800,width=650,location=yes,status=yes,scrollbars=yes,resizable=yes');return false;" target="_blank" style="border: 0px; margin: 0px;" href="https://login.oticket.nl/Order/03233bdd6a374b71bf93/" />28 Nov 2014 @20:00</a></li>
+        <li><a onclick="window.open(this.href, this.target, 'height=800,width=650,location=yes,status=yes,scrollbars=yes,resizable=yes');return false;" target="_blank" style="border: 0px; margin: 0px;" href="https://login.oticket.nl/Order/24619cecbb754f2eafb9/" />29 Nov 2014 @20:00</a></li>
+        <li><a onclick="window.open(this.href, this.target, 'height=800,width=650,location=yes,status=yes,scrollbars=yes,resizable=yes');return false;" target="_blank" style="border: 0px; margin: 0px;" href="https://login.oticket.nl/Order/48ec4785844149058140/" />30 Nov 2014 @13:00</a></li>
+      <p>&nbsp;</p>
+    </ul>
+  <!-- end .sidebar1 --></div>
+  <article class="content">
+    <section>
+      <p><img src="images/ScottishplayPoster750.jpg" width="763" height="550"></p>
+    </section>
+  <!-- end .content --></article>
+  <footer>
+    <p></p>
+</footer>
+  <!-- end .container --></div>
+</body>
+</html>
+
